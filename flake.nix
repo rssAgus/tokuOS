@@ -14,7 +14,7 @@
     # Define nuestros sistemas NixOS
     nixosConfigurations = {
       # Este es el nombre de tu sistema, puedes cambiarlo
-      "NixOS" = nixpkgs.lib.nixosSystem {
+      "agustin" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux"; # Cambia esto a tu arquitectura
         specialArgs = { inherit inputs; }; # Pasa los inputs a los modulos
 
