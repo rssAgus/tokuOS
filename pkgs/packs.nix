@@ -2,9 +2,9 @@
 
 environment.systemPackages = with pkgs; [
 	neovim
-	git
 	vscode
-	firefox	
+	git
+	gh	
 	spotify
 	nodejs		
 	openvpn

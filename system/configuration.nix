@@ -17,7 +17,7 @@
 
   # 
 
-  networking.hostName = "NixOS"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # docker
@@ -39,10 +39,10 @@
   # Set your time zone.
   time.timeZone = "America/Argentina/Buenos_Aires";
 
- # COSMIC
-services.displayManager.cosmic-greeter.enable = true;
-services.desktopManager.cosmic.enable = true;
-services.desktopManager.cosmic.xwayland.enable = true;
+  # COSMIC
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.xwayland.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -84,6 +84,8 @@ services.desktopManager.cosmic.xwayland.enable = true;
 
 fonts.packages = with pkgs; [
 	nerd-fonts.fira-code
+	nerd-fonts.space-mono
+	nerd-fonts.hurmit
 ];  
 
   # Some programs need SUID wrappers, can be configured further or are
