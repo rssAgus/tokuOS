@@ -12,7 +12,7 @@
         modules = [
           ./system/configuration.nix
           ./system/hardware-configuration.nix
-          ./pkgs/packs.nix
+          ./system/pkgs/packs.nix
         ];
       };
     };
