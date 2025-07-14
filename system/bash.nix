@@ -5,7 +5,7 @@
 	programs = [
 
 		bash {
-			shellAliases = [
+			shellAliases [
 				rebuild = "sudo nixos-rebuild switch";
 				configure-dots = "cd repos/github/mynix-doties && code .";
 			];
