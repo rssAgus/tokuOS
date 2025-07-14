@@ -2,11 +2,10 @@
 {
 
   programs.bash.shellAliases = {
-    l = "ls -alh";
-    ll = "ls -l";
-    ls = "ls --color=tty";
+    rebuild = "sudo nixos-rebuild switch";
+    configure-dots = "cd repos/github/mynix-doties/ && code .";
   };
-  
+
   programs.starship.enable = true;
 
 }
