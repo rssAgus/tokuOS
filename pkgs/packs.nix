@@ -27,6 +27,7 @@ environment.systemPackages = with pkgs; [
 	pipx
 	tree
 	qemu
+	google-chrome
  ];
 
 }
