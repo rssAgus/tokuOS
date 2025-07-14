@@ -5,7 +5,7 @@
   programs.starship.enable = true;
 
   shellAliases = [
-    sudo nixos-rebuild switch = "rebuild"
+    sudo nixos-rebuild switch = [ "rebuild" ]
   ];
 
 
