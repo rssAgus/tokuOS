@@ -28,6 +28,7 @@ environment.systemPackages = with pkgs; [
 	tree
 	qemu
 	google-chrome
+	discord
  ];
 
 }
