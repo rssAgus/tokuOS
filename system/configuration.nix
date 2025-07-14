@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 	    ../pkgs/packs.nix
-      ./bash.nix
     ];
 
   # Starship 
