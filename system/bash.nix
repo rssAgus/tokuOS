@@ -1,9 +1,8 @@
 { config, pkgs, ... }: 
 {
 
-  security.sudo.wheelNeedsPassword = false;
-
   programs.bash.shellAliases = {
+    security.sudo.wheelNeedsPassword = false;
     rebuild = "cd repos/github/mynix-doties/ && sudo nixos-rebuild switch --flake .#rssagus";
     configure-dots = "cd repos/github/mynix-doties/ && code .";
   };
