@@ -1,11 +1,12 @@
 { config, pkgs, ... }: 
 {
 
-  # Bash with Starship
   programs.bash.shellAliases = {
-    sudo nixos-rebuild switch = "rebuild";
+    l = "ls -alh";
+    ll = "ls -l";
+    ls = "ls --color=tty";
   };
-
+  
   programs.starship.enable = true;
 
 }
