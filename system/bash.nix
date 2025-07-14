@@ -2,12 +2,16 @@
 {
 
 	# Terminal
-	shellAliases = [
-		rebuild = "sudo nixos-rebuild switch";
-		configure-dots = "cd repos/github/mynix-doties && code .";
-	];
+	programs = [
 
-	# Starship
-	programs.starship.enable = true;
+		bash = {
+			shellAliases = [
+				rebuild = "sudo nixos-rebuild switch";
+				configure-dots = "cd repos/github/mynix-doties && code .";
+			];
+		};
+
+		starship.enable = true;
+	];
 
 }
