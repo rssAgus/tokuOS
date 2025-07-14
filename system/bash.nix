@@ -1,11 +1,22 @@
-{ config, pkgs, ... }:
-let
-	Shortcuts = [
-		sudo nixos-rebuild switch = "rebuild"
-	];
-in {
-	# Bash
-	programs.bash.enable = true;
+{ config, pkgs, lib, ... }:
+{
 
-	programs.starship.enable = true;
+	# Terminal
+	programs = {
+	
+		command-not-found.enable = false;
+		
+		# Bash
+		bash = {
+			enable true;
+			shellAliases = {
+				rebuild = "sudo nixos-rebuild switch";
+				configure-dots = "cd repos/github/mynix-doties && code .";
+			};
+		};
+
+		# Starship
+		starship.enable = true;
+	};
+
 }
