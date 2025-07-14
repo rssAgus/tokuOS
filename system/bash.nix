@@ -3,8 +3,7 @@ let
 	Shortcuts = [
 		sudo nixos-rebuild switch = "rebuild"
 	];
-in
-{
+in {
 	# Bash
 	programs.bash.enable = true;
 
