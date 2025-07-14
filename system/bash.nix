@@ -5,7 +5,7 @@
   
   # Aliases
   programs.bash.shellAliases = {
-    rebuild = "cd /home/agustin/repos/github/mynix-doties/ && sudo nixos-rebuild switch --flake .#rssagus";
+    rebuild = "sudo nixos-rebuild switch --flake /home/agustin/repos/github/mynix-doties#rssagus";
     configure-dots = "cd repos/github/mynix-doties/ && code .";
   };
 
