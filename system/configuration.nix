@@ -5,15 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-	    ../pkgs/packs.nix
-      ./bash.nix
-    ];
-
-  # Starship 
-  programs.starship.enable = true;
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+	  ../pkgs/packs.nix
+    ./bash.nix
+  ];
 
 
   # Bootloader
