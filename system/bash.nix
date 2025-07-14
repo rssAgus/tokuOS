@@ -2,21 +2,9 @@
 {
 
 	# Terminal
-	programs = {
-	
-		command-not-found.enable = false;
-		
-		# Bash
-		bash = {
-			enable true;
-			shellAliases = {
-				rebuild = "sudo nixos-rebuild switch";
-				configure-dots = "cd repos/github/mynix-doties && code .";
-			};
-		};
+	programs.bash.enable = true;
 
-		# Starship
-		starship.enable = true;
-	};
+	# Starship
+	programs.starship.enable = true;
 
 }
