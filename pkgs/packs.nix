@@ -27,7 +27,6 @@ environment.systemPackages = with pkgs; [
 	pipx
 	tree
 	qemu
-	virt-manager
  ];
 
 }

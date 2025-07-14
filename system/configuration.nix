@@ -11,32 +11,23 @@
 	    ../pkgs/packs.nix
     ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # 
 
+  # Hostname
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # docker
-  virtualisation.docker = {
-  enable = true;
-};
+  # Docker
+    virtualisation.docker = {
+    enable = true;
+  };
 
-
-  # starship
-  programs.starship.enable = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
+  # Network Manager
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # TZ
   time.timeZone = "America/Argentina/Buenos_Aires";
 
   # COSMIC
@@ -44,7 +35,8 @@
   services.desktopManager.cosmic.enable = true;
   services.desktopManager.cosmic.xwayland.enable = true;
 
-  # Select internationalisation properties.
+  # Locale
+  
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -59,13 +51,13 @@
     LC_TIME = "es_AR.UTF-8";
   };
 
-  # Configure keymap in X11
+  # Keyboard Locale
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # User
   users.users.agustin = {
     isNormalUser = true;
     description = "agustin";
@@ -73,7 +65,7 @@
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
+  # Unfree pkgs
   nixpkgs.config.allowUnfree = true;
 
   # Nix features
@@ -82,21 +74,11 @@
   # Flatpak enabled
   services.flatpak.enable = true;
 
-fonts.packages = with pkgs; [
-	nerd-fonts.fira-code
-	nerd-fonts.space-mono
-	nerd-fonts.hurmit
-];  
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
+  fonts.packages = with pkgs; [
+	  nerd-fonts.fira-code
+	  nerd-fonts.space-mono
+	  nerd-fonts.hurmit
+  ];  
 
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
