@@ -2,10 +2,10 @@
 {
 
   # Bash with Starship
-  programs.bash.shellAliases = [
+  programs.bash.shellAliases = {
     sudo nixos-rebuild switch = [ "rebuild" ];
-  ];
-  
+  };
+
   programs.starship.enable = true;
 
 }
