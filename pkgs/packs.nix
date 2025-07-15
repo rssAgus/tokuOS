@@ -29,6 +29,7 @@ environment.systemPackages = with pkgs; [
 	qemu
 	google-chrome
 	discord
+	kitty
  ];
 
 }
