@@ -30,6 +30,7 @@ environment.systemPackages = with pkgs; [
 	google-chrome
 	discord
 	kitty
+	cmatrix
  ];
 
 }
