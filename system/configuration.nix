@@ -13,6 +13,7 @@
     ./fonts.nix
     ./language.nix
     ./nix-features.nix
+    ./de.nix
   ];
 
 
@@ -29,11 +30,6 @@
 
   # TZ
   time.timeZone = "America/Argentina/Buenos_Aires";
-
-  # COSMIC
-  services.displayManager.cosmic-greeter.enable = true;
-  services.desktopManager.cosmic.enable = true;
-  services.desktopManager.cosmic.xwayland.enable = true;
 
   # User
   users.users.agustin = {
