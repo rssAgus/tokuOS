@@ -1,6 +1,6 @@
 { config, pkgs, ... }: 
 {
-  # Rootless :'v
+  # Rootless bc IDGAF
   security.sudo.wheelNeedsPassword = false;
   
   # Aliases
@@ -9,7 +9,7 @@
     configure-dots = "cd Repos/github/mynix-doties/ && code .";
   };
 
-  # Starship prompt
+  # Starship Prompt
   programs.starship.enable = true;
 
 }

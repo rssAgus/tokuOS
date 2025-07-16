@@ -1,7 +1,6 @@
 { config, pkgs, ... }: {
 
 environment.systemPackages = with pkgs; [
-	neovim
 	vscode
 	git
 	gh	
@@ -22,7 +21,7 @@ environment.systemPackages = with pkgs; [
 	python3
 	john
 	theharvester
-	dig
+	dnsutils
 	python313Packages.pip
 	pipx
 	tree
@@ -31,6 +30,7 @@ environment.systemPackages = with pkgs; [
 	discord
 	kitty
 	cmatrix
+	btop
  ];
 
 }
