@@ -26,6 +26,7 @@ environment.systemPackages = with pkgs; [
 	pipx
 	tree
 	qemu
+	virt-manager
 	google-chrome
 	discord
 	kitty
