@@ -10,6 +10,10 @@
   };
 
   # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
+  services.openssh.enable = true;
+
+  #Virtualization with LibVirt
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
 }
