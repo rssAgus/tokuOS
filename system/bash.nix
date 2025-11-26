@@ -5,8 +5,8 @@
   
   # Aliases
   programs.bash.shellAliases = {
-    rebuild = "cd Repos/github/mynix-doties/ && sudo nixos-rebuild switch --flake .#rssagus";
-    configure-dots = "cd Repos/github/mynix-doties/ && code .";
+    rebuild = "cd /home/agustin/repos/mine/tokuOS && sudo nixos-rebuild switch --flake .#rssagus";
+    configure-dots = "cd /home/agustin/repos/mine/tokuOS/ && code .";
   };
 
   # Starship Prompt
