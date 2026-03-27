@@ -23,5 +23,5 @@
   services.tlp.enable = true;
   services.power-profiles-daemon.enable = false; # TLP entra en conflicto con este, mejor apagarlo
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.11";
 }
