@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
+#    ./hardware-configuration.nix || Bruh how did I forgot to comment this
     ./system/bash.nix
     ./system/de.nix
-#    ./system/fonts.nix
+#    ./system/fonts.nix || Someday I'll add this ok,,,
     ./system/apps.nix
   ];
 
