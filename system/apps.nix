@@ -14,7 +14,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # Herramientas de sistema
     vim
     wget
     git
@@ -22,15 +21,15 @@
     fastfetch
     pciutils
     usbutils
-
     rustup      # Para Rust
     go          # Para Go
     gcc         # Para C
     nodejs      # Para JavaScript
     python3     # Para Python
-    
     firefox
     vlc
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.just-perfection
   ];
 
   nixpkgs.config.allowUnfree = true;
