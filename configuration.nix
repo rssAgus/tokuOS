@@ -3,18 +3,23 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./bash.nix
-    ./de.nix
-    ./fonts.nix
-    ./apps.nix
+    ./system/bash.nix
+    ./system/de.nix
+#    ./system/fonts.nix
+    ./system/apps.nix
   ];
 
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  users.users.agus = {
+  isNormalUser = true;
+  extraGroups = [ "wheel" "networkmanager" "docker" ];
+  };
 
-  networking.hostName = "nixos-agustin";
+  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
   services.openssh.enable = true;

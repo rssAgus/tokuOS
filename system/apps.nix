@@ -17,7 +17,7 @@
     vim
     wget
     git
-    htop
+    btop
     fastfetch
     pciutils
     usbutils
@@ -30,7 +30,21 @@
     vlc
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
+    gh
+    openvpn
+    openfortivpn
+    zapzap
+    spotify
+    discord
+    gnome-tweaks
   ];
+
+  programs.starship.enable = true;
+
+  virtualisation.docker = {
+    enable = true;
+  };
+
 
   nixpkgs.config.allowUnfree = true;
 }

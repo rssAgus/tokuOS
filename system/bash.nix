@@ -12,9 +12,12 @@
       c = "clear";
       g = "git";
       gs = "git status";
+      conf = "cd /etc/nixos/";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-agustin";
+      packages = "nano /etc/nixos/system/apps.nix";
       
       # Atajos 
-      ll = "ls -la";
+      l = "ls -lrph";
     };
   };
 }
