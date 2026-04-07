@@ -30,6 +30,7 @@
     vlc
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
+    gnomeExtensions.appindicator
     gh
     openvpn
     openfortivpn
@@ -37,6 +38,11 @@
     spotify
     discord
     gnome-tweaks
+    tree
+    bibata-cursors
+    obsidian
+    remmina
+    whois
   ];
 
   programs.starship.enable = true;

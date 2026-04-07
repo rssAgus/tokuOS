@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./system/bash.nix
     ./system/de.nix
-#    ./system/fonts.nix
+    ./system/fonts.nix
     ./system/apps.nix
   ];
 
