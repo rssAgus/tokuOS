@@ -6,20 +6,18 @@
       export EDITOR="vim"
     '';
     shellAliases = {
-      nos = "sudo nixos-rebuild switch --flake .";
-      nclean = "sudo nix-collect-garbage -d";
       
-      c = "clear";
-      g = "git";
-      gs = "git status";
+      ### CONF ALIASES
       conf = "cd /etc/nixos/";
-      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos-agustin";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#tokuOS";
       packages = "nano /etc/nixos/system/apps.nix";
       edit-aliases = "nano /etc/nixos/system/bash.nix";
-      migrate-conf = "sudo cp -r /etc/nixos/* /home/agus/Projects/tokuOS/ && cd /home/agus/Projects/tokuOS/"; # apparently this is not working, i guess i will have to push all by myself
+      migrate-conf = "sudo cp -r /etc/nixos/* /home/agus/Projects/tokuOS/ && cd /home/agus/Projects/tokuOS/"; # Someday I'll configure this way easier
       
-      # Atajos 
+      # Some shortcuts
       l = "ls -lrph";
+      nclean = "sudo nix-collect-garbage -d";
+      c = "clear";
     };
   };
 }

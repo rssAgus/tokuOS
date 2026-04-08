@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+
+  ## In case I need to run binaries, I'll leave this here...
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
@@ -21,16 +23,13 @@
     fastfetch
     pciutils
     usbutils
-    rustup      # Para Rust
-    go          # Para Go
-    gcc         # Para C
-    nodejs      # Para JavaScript
-    python3     # Para Python
+    rustup      
+    go          
+    gcc         
+    nodejs      
+    python3
     firefox
     vlc
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.just-perfection
-    gnomeExtensions.appindicator
     gh
     openvpn
     openfortivpn
@@ -43,10 +42,28 @@
     obsidian
     remmina
     whois
+    qemu_kvm
+    libvirt
+    bridge-utils
+    virt-viewer
+    OVMF
+    noctalia-shell
+    alacritty
+    swaylock
+    fuzzel
+    vscodium
   ];
 
+  ### VIRTUALIZATION ####
+    programs.dconf.enable = true;
+    virtualisation.libvirtd.enable = true;
+    programs.virt-manager.enable = true;
+  ### VIRTUALIZATION ####
+
+  ### STARSHIP
   programs.starship.enable = true;
 
+  ### DOCKER
   virtualisation.docker = {
     enable = true;
   };
