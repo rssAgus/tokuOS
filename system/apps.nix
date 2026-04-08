@@ -15,6 +15,9 @@
     xorg.libX11
   ];
 
+  ### Had to do this bc some apps are forcing x11 to run
+  environment.variables.NIXOS_OZONE_WL = "1";
+
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -34,8 +37,7 @@
     openvpn
     openfortivpn
     zapzap
-    spotify
-    discord
+    vesktop
     gnome-tweaks
     tree
     bibata-cursors
@@ -49,9 +51,8 @@
     OVMF
     noctalia-shell
     alacritty
-    swaylock
-    fuzzel
     vscodium
+    swaylock
   ];
 
   ### VIRTUALIZATION ####
@@ -62,6 +63,9 @@
 
   ### STARSHIP
   programs.starship.enable = true;
+
+  ### FLATPAK (btw this is just for spotify, it doesn't run on niri using nixpkgs)
+  services.flatpak.enable = true;
 
   ### DOCKER
   virtualisation.docker = {

@@ -32,8 +32,19 @@
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = true;
   
-  ### PPD for Noctalia
-  services.power-profiles-daemon.enable = true;
+  ### auto-cpufreq cause my CPU is going to take off like a SpaceX
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+      governor = "powersave";
+      turbo = "never";
+    };
+
+    charger = {
+      governor = "performance";
+      turbo = "auto";
+    };
+  };
 
   system.stateVersion = "25.11";
 }
